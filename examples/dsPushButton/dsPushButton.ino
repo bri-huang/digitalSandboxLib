@@ -3,13 +3,12 @@
 //the variable programState is incremented for each
 //state.
 //
-#include "digitalSandbox.h"
-digitalSandbox ds;
+#include <digitalSandbox.h>
 
 int programState = 0;
 
 void setup() {
-  Serial.begin(9600);
+  setupSandbox();
 }
 
 void loop() {
@@ -23,16 +22,16 @@ void loop() {
   }
   switch (programState) {
     case 0:
-      ds.setRGB(255, 0, 0); //set to Red
+      setRGB(255, 0, 0); //set to Red
       break;
     case 1:
-      ds.setRGB(255, 255, 255); //set to White
+      setRGB(255, 255, 255); //set to White
       break;
     case 2:
-      ds.setRGB(0, 0, 255); //set to Blue
+      setRGB(0, 0, 255); //set to Blue
       break;
     case 3:
-      ds.setRGB(0, 0, 0); //set to all off
+      setRGB(0, 0, 0); //set to all off
       break;
   }
 }
