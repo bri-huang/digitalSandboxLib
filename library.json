@@ -1,0 +1,14 @@
+{
+  "name": "digitalSandbox",
+  "keywords": "sandbox, digitalSandbox"
+  "description": "The digitalSandbox is a pre-wired Arduino board designed for learning how to 
+  program in Arduino",
+  "repository":
+  {
+    "type": "git",
+    "url": "https://github.com/sparkfun/SparkFun_RedBot_Arduino_Library.git"
+  },
+  "version": "2.1.0",
+  "frameworks": "arduino",
+  "platforms": "atmelavr"
+}
