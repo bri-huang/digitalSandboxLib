@@ -46,14 +46,15 @@ to simplify the manipulation of the LEDs and pins on the board. </p>
 
 <pre><code>void setupSandbox();          // setups up pins and Serial.begin(9600);
 
-void leds(byte d4, byte d5, byte d6, byte d7, byte d8); // sets the state of all 8 LEDs
-void LEDon(byte pin);
-void LEDoff(byte pin);
+void leds(byte led4, byte led5, byte led6, byte led7, byte led8); // sets the state of all 8 LEDs
 
-void LEDon(byte pin, unsigned int timeDelay);
-void LEDoff(byte pin, unsigned int timeDelay);  
-void setRGB(byte _red, byte _green, byte _blue);
-void setRGB(byte _red, byte _green, byte _blue, unsigned int _timeDelay);
+void ledOn(byte pinNum);
+void ledOff(byte pinNum);
+
+void ledOn(byte pinNum, unsigned int timeDelay);
+void ledOff(byte pinNum, unsigned int timeDelay);  
+void setRGB(byte red, byte green, byte blue);
+void setRGB(byte red, byte green, byte blue, unsigned int delayTime);
 
 void blink(byte pinNum); 
 void blink(byte pinNum, unsigned int delayTime); 
