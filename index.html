@@ -40,24 +40,27 @@
 instantiation of the digitalSandbox class. In addition, methods are added
 to simplify the manipulation of the LEDs and pins on the board. </p>
 
+<p>To install this library, download the .zip file. Open up Arduino. Go to: Sketch&gt;&gt;Include Library&gt;&gt;Add .ZIP Library...</p>
+
+<p>Navigate to your downloads folder or where you downloaded the library, and select the file you just downloaded.</p>
+
 <hr>
 
 <p>These methods can be found in the .h file, but are here for reference:</p>
 
 <pre><code>void setupSandbox();          // setups up pins and Serial.begin(9600);
 
-void leds(byte led4, byte led5, byte led6, byte led7, byte led8); // sets the state of all 8 LEDs
-
-void ledOn(byte pinNum);
-void ledOff(byte pinNum);
-
-void ledOn(byte pinNum, unsigned int timeDelay);
-void ledOff(byte pinNum, unsigned int timeDelay);  
-void setRGB(byte red, byte green, byte blue);
-void setRGB(byte red, byte green, byte blue, unsigned int delayTime);
-
 void blink(byte pinNum); 
 void blink(byte pinNum, unsigned int delayTime); 
+
+void leds(byte led4, byte led5, byte led6, byte led7, byte led8); // sets the state of all 5 LEDs
+void ledOn(byte pinNum);
+void ledOff(byte pinNum);
+void setRGB(byte red, byte green, byte blue);
+
+void ledOn(byte pinNum, unsigned int delayTime);
+void ledOff(byte pinNum, unsigned int delayTime);   
+void setRGB(byte red, byte green, byte blue, unsigned int delayTime);
 
 unsigned int readSlider();
 unsigned int readSound();
