@@ -1,5 +1,5 @@
 #include "digitalSandbox.h"
-digitalSandbox ds;
+
 void setup(){
   //put code here that you want to run just once.
 }

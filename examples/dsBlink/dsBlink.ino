@@ -1,10 +1,10 @@
-#include "digitalSandbox.h"
-digitalSandbox ds;
+#include <digitalSandbox.h>
+
 void setup(){
+  setupSandbox();
 }
 
 void loop(){
-  ds.LEDon(13, 500);
-  ds.LEDoff(13, 500); 
+  LEDon(13, 500);
+  LEDoff(13, 500);
 }
-

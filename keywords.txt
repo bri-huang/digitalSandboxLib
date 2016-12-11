@@ -12,6 +12,7 @@ digitalSandbox			KEYWORD1
 # Methods and Functions (KEYWORD2)
 #######################################
 
+setupSandbox	KEYWORD2
 setRGB			KEYWORD2
 LEDon			KEYWORD2
 LEDoff	   		KEYWORD2

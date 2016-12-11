@@ -9,16 +9,16 @@ Code developed in Arduino 1.6.12, on an SparkFun DigitalSandbox v1
 #include <avr/interrupt.h>
 #include <Arduino.h>
 
-digitalSandbox::digitalSandbox()
+void setupSandbox()
 {
   for(int x=4; x<=11; x++)
 	  pinMode(x, OUTPUT); 
   pinMode(13, OUTPUT);
-//  Serial.begin(9600);
+  Serial.begin(9600);
 }
 
 // sets the state of all 8 LEDs
-void digitalSandbox::leds(byte d4_state, byte d5_state, byte d6_state, byte d7_state, byte d8_state) 
+void leds(byte d4_state, byte d5_state, byte d6_state, byte d7_state, byte d8_state) 
 {
   digitalWrite(4, d4_state);
   digitalWrite(5, d5_state);
@@ -27,14 +27,14 @@ void digitalSandbox::leds(byte d4_state, byte d5_state, byte d6_state, byte d7_s
   digitalWrite(8, d8_state);
 }
 
-void digitalSandbox::setRGB(byte _red, byte _green, byte _blue)
+void setRGB(byte _red, byte _green, byte _blue)
 {
   analogWrite(9, _red);
   analogWrite(10, _green);
   analogWrite(11, _blue);
 }
 
-void digitalSandbox::setRGB(byte _red, byte _green, byte _blue, unsigned int _timeDelay)
+void setRGB(byte _red, byte _green, byte _blue, unsigned int _timeDelay)
 {
   analogWrite(9, _red);
   analogWrite(10, _green);
@@ -42,29 +42,29 @@ void digitalSandbox::setRGB(byte _red, byte _green, byte _blue, unsigned int _ti
   delay(_timeDelay);
 }
 
-void digitalSandbox::LEDon(byte _pin)
+void LEDon(byte _pin)
 {
 	digitalWrite(_pin, HIGH);
 }
 
-void digitalSandbox::LEDoff(byte _pin)
+void LEDoff(byte _pin)
 {
 	digitalWrite(_pin, LOW);
 }	
 
-void digitalSandbox::LEDon(byte _pin, unsigned int _timeDelay)
+void LEDon(byte _pin, unsigned int _timeDelay)
 {
 	digitalWrite(_pin, HIGH);
 	delay(_timeDelay);
 }
 
-void digitalSandbox::LEDoff(byte _pin, unsigned int _timeDelay)
+void LEDoff(byte _pin, unsigned int _timeDelay)
 {
 	digitalWrite(_pin, LOW);
 	delay(_timeDelay);
 }	
 
-void digitalSandbox::blink(byte _pin)
+void blink(byte _pin)
 {
 	digitalWrite(_pin, HIGH);
 	delay(500);
@@ -72,7 +72,7 @@ void digitalSandbox::blink(byte _pin)
 	delay(500);
 }	
 
-void digitalSandbox::blink(byte _pin, unsigned int _timeDelay)
+void blink(byte _pin, unsigned int _timeDelay)
 {
 	digitalWrite(_pin, HIGH);
 	delay(_timeDelay);
@@ -80,30 +80,30 @@ void digitalSandbox::blink(byte _pin, unsigned int _timeDelay)
 	delay(_timeDelay);	
 }
 
-unsigned int digitalSandbox::readSlider()
+unsigned int readSlider()
 {
 	return analogRead(SLIDER);
 }
-unsigned int digitalSandbox::readSound()
+unsigned int readSound()
 {
 	return analogRead(SOUND);
 }
-unsigned int digitalSandbox::readLight()
+unsigned int readLight()
 {
 	return analogRead(LIGHT);
 }
-float digitalSandbox::readTemp()
+float readTemp()
 {   
     // returns the voltage in degrees C
 	float voltage = analogRead(TEMP) * AREF;
 	voltage /= 1023.0;
 	return (voltage - 0.5)*100;
 }
-boolean digitalSandbox::readButton()
+boolean readButton()
 {
 	return digitalRead(BUTTON);
 }
-boolean digitalSandbox::readSwitch()
+boolean readSwitch()
 {
 	return digitalRead(SWITCH);
 }

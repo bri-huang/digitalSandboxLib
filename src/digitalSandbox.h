@@ -27,25 +27,23 @@ Code developed in Arduino 1.6.12, on an SparkFun DigitalSandbox v1.
 
 // This class handles motor functionality. I expect one instance of this at the
 //  start of a piece of RedBot code.
-class digitalSandbox
-{
-  public:
-    digitalSandbox();          // Constructor. Mainly sets up pins.
-	void leds(byte d4, byte d5, byte d6, byte d7, byte d8); // sets the state of all 8 LEDs
-	void LEDon(byte pin);
-	void LEDoff(byte pin);
-	
-	void LEDon(byte pin, unsigned int timeDelay);
-	void LEDoff(byte pin, unsigned int timeDelay);	
-	void setRGB(byte _red, byte _green, byte _blue);
-	void setRGB(byte _red, byte _green, byte _blue, unsigned int _timeDelay);
 
-	void blink(byte pinNum); 
-	void blink(byte pinNum, unsigned int delayTime); 
-	unsigned int readSlider();
-	unsigned int readSound();
-	unsigned int readLight();
-	float readTemp();
-	boolean readButton();
-	boolean readSwitch();	
-};
+void setupSandbox(); //sets up all of the pinModes
+void leds(byte d4, byte d5, byte d6, byte d7, byte d8); // sets the state of all 8 LEDs
+void LEDon(byte pin);
+void LEDoff(byte pin);
+	
+void LEDon(byte pin, unsigned int timeDelay);
+void LEDoff(byte pin, unsigned int timeDelay);	
+void setRGB(byte _red, byte _green, byte _blue);
+void setRGB(byte _red, byte _green, byte _blue, unsigned int _timeDelay);
+
+void blink(byte pinNum); 
+void blink(byte pinNum, unsigned int delayTime); 
+unsigned int readSlider();
+unsigned int readSound();
+unsigned int readLight();
+float readTemp();
+boolean readButton();
+
+boolean readSwitch();	
