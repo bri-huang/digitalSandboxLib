@@ -27,57 +27,57 @@ void leds(byte d4_state, byte d5_state, byte d6_state, byte d7_state, byte d8_st
   digitalWrite(8, d8_state);
 }
 
-void setRGB(byte _red, byte _green, byte _blue)
+void setRGB(byte red, byte green, byte blue)
 {
-  analogWrite(9, _red);
-  analogWrite(10, _green);
-  analogWrite(11, _blue);
+  analogWrite(9, red);
+  analogWrite(10, green);
+  analogWrite(11, blue);
 }
 
-void setRGB(byte _red, byte _green, byte _blue, unsigned int _timeDelay)
+void setRGB(byte red, byte green, byte blue, unsigned int delayTime)
 {
-  analogWrite(9, _red);
-  analogWrite(10, _green);
-  analogWrite(11, _blue);
-  delay(_timeDelay);
+  analogWrite(9, red);
+  analogWrite(10, green);
+  analogWrite(11, blue);
+  delay(delayTime);
 }
 
-void LEDon(byte _pin)
+void ledOn(byte pinNum)
 {
-	digitalWrite(_pin, HIGH);
+	digitalWrite(pinNum, HIGH);
 }
 
-void LEDoff(byte _pin)
+void ledOff(byte pinNum)
 {
-	digitalWrite(_pin, LOW);
+	digitalWrite(pinNum, LOW);
 }	
 
-void LEDon(byte _pin, unsigned int _timeDelay)
+void ledOn(byte pinNum, unsigned int delayTime)
 {
-	digitalWrite(_pin, HIGH);
-	delay(_timeDelay);
+	digitalWrite(pinNum, HIGH);
+	delay(delayTime);
 }
 
-void LEDoff(byte _pin, unsigned int _timeDelay)
+void ledOff(byte pinNum, unsigned int delayTime)
 {
-	digitalWrite(_pin, LOW);
-	delay(_timeDelay);
+	digitalWrite(pinNum, LOW);
+	delay(delayTime);
 }	
 
-void blink(byte _pin)
+void blink(byte pinNum)
 {
-	digitalWrite(_pin, HIGH);
+	digitalWrite(pinNum, HIGH);
 	delay(500);
-	digitalWrite(_pin, LOW);
+	digitalWrite(pinNum, LOW);
 	delay(500);
 }	
 
-void blink(byte _pin, unsigned int _timeDelay)
+void blink(byte pinNum, unsigned int delayTime)
 {
-	digitalWrite(_pin, HIGH);
-	delay(_timeDelay);
-	digitalWrite(_pin, LOW);
-	delay(_timeDelay);	
+	digitalWrite(pinNum, HIGH);
+	delay(delayTime);
+	digitalWrite(pinNum, LOW);
+	delay(delayTime);	
 }
 
 unsigned int readSlider()

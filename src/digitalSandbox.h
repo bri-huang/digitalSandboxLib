@@ -30,11 +30,11 @@ Code developed in Arduino 1.6.12, on an SparkFun DigitalSandbox v1.
 
 void setupSandbox(); //sets up all of the pinModes
 void leds(byte d4, byte d5, byte d6, byte d7, byte d8); // sets the state of all 8 LEDs
-void LEDon(byte pin);
-void LEDoff(byte pin);
+void ledOn(byte pin);
+void ledOff(byte pin);
 	
-void LEDon(byte pin, unsigned int timeDelay);
-void LEDoff(byte pin, unsigned int timeDelay);	
+void ledOn(byte pin, unsigned int timeDelay);
+void ledOff(byte pin, unsigned int timeDelay);	
 void setRGB(byte _red, byte _green, byte _blue);
 void setRGB(byte _red, byte _green, byte _blue, unsigned int _timeDelay);
 

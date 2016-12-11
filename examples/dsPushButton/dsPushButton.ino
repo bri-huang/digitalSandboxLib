@@ -1,17 +1,21 @@
 //dsPushButton.ino example
-//Push button cycles the code through a state-machine
-//the variable programState is incremented for each
-//state.
+//  Push button cycles the code through a state-machine
+//  the variable programState is incremented for each
+//  state.
 //
+
+//includes the library routines for the digitalSandbox
 #include <digitalSandbox.h>
 
 int programState = 0;
 
-void setup() {
-  setupSandbox();
+void setup()
+{
+  setupSandbox();  //sets up pins for digitalSandbox
 }
 
-void loop() {
+void loop() 
+{
   if (digitalRead(12) == true)
   {
     programState = programState + 1;
