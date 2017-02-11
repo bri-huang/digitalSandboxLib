@@ -1,5 +1,5 @@
 #######################################
-# Syntax Coloring Map For RedBot
+# Syntax Coloring Map For DigitalSandbox
 #######################################
 
 #######################################
@@ -14,8 +14,8 @@ digitalSandbox			KEYWORD1
 
 setupSandbox	KEYWORD2
 setRGB			KEYWORD2
-LEDon			KEYWORD2
-LEDoff	   		KEYWORD2
+ledOn			KEYWORD2
+ledOff	   		KEYWORD2
 leds			KEYWORD2
 blink			KEYWORD2
 readSlider		KEYWORD2 
