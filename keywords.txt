@@ -6,34 +6,34 @@
 # Datatypes (KEYWORD1)
 #######################################
 
-digitalSandbox			KEYWORD1
+digitalSandbox	KEYWORD1
 
 #######################################
 # Methods and Functions (KEYWORD2)
 #######################################
 
 setupSandbox	KEYWORD2
-setRGB			KEYWORD2
-ledOn			KEYWORD2
-ledOff	   		KEYWORD2
-leds			KEYWORD2
-blink			KEYWORD2
-readSlider		KEYWORD2 
-readSound		KEYWORD2
-readLight		KEYWORD2
-readTemp		KEYWORD2
-readButton		KEYWORD2
-readSwitch 		KEYWORD2
+setRGB	KEYWORD2
+ledOn	KEYWORD2
+ledOff	KEYWORD2
+leds	KEYWORD2
+blink	KEYWORD2
+readSlider	KEYWORD2 
+readSound	KEYWORD2
+readLight	KEYWORD2
+readTemp	KEYWORD2
+readButton	KEYWORD2
+readSwitch	KEYWORD2
 
 #######################################
 # Constants (LITERAL1)
 #######################################
 
-TEMP		LITERAL1
-LIGHT		LITERAL1
-SOUND		LITERAL1
-SLIDER		LITERAL1
-RED			LITERAL1
-GREEN		LITERAL1
-BLUE		LITERAL1
-AREF		LITERAL1
+TEMP	LITERAL1
+LIGHT	LITERAL1
+SOUND	LITERAL1
+SLIDER	LITERAL1
+RED	LITERAL1
+GREEN	LITERAL1
+BLUE	LITERAL1
+AREF	LITERAL1
